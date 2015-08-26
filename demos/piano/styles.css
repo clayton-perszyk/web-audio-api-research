@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ1_aps4-BLJOVZ0c64HNuorbZ7RKPC2WxT1Yek8wGUJawkucmSlw");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div {
+  border-radius: 2%;
+}
+
+#canvas {
+  background: #333;
+  margin: 8px 35px 35px 70px;
+  box-shadow: 10px 10px 10px #000000;
+}
+
+.white {
+  height: 500px;
+  width: 60px;
+  border: 1px solid black;
+  background: #ddd;
+  float: left;
+  margin-right: -40px;
+  box-shadow: -2px -2px 0px #fff;
+}
+
+.black {
+  height: 250px;
+  width: 40px;
+  border: 1px solid black;
+  float: left;
+  background: black;
+  position: relative;
+  left: 20px;
+  box-shadow: 2px 2px 5px #111;
+}
+
+button {
+  float: left;
+  margin: 1px 5px 15px 70px;
+  background: #ddd;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #111;
+}
+
+#E {
+  padding-right: 100px;
+}

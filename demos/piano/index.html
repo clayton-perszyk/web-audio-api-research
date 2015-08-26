@@ -3,56 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Piano</title>
-    <style media="screen">
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-          background: #999;
-      }
-
-      #canvas {
-        background: black;
-        margin: 10px 35px 25px 50px;
-      }
-
-
-      .white {
-        height: 500px;
-        width: 60px;
-        border: 1px solid black;
-        background: #eee;
-        float: left;
-      }
-
-      .white {
-        margin-right: -40px;
-      }
-
-      .black {
-        height: 250px;
-        width: 40px;
-        border: 1px solid black;
-        float: left;
-        background: black;
-        position: relative;
-        left: 20px;
-      }
-
-      button {
-        float: left;
-        margin: 1px 20px 15px 50px;
-        background: #005599;
-        padding: 12px;
-        font-size: 16px;
-        color: #eee;
-      }
-
-      #E {
-        padding-right: 100px;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <section>
@@ -75,7 +26,7 @@
       <button type="button" name="button" id="triangle">triangle Wave</button>
       <button type="button" name="button" id="sawtooth">Sawtooth Wave</button>
     </section>
-    <canvas id="canvas" width="645" height="430"></canvas>
+    <canvas id="canvas" width="750" height="430"></canvas>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
   </body>
