@@ -14,6 +14,7 @@ var pitches = {
 };
 var canvas = document.getElementById('canvas');
 var canvasContext = canvas.getContext('2d');
+
 function setFreq(pianoKey, pitches) {
   var freq;
   for (var pitch in pitches) {
@@ -34,8 +35,11 @@ gain.connect(analyser);
 analyser.connect(context.destination);
 gain.gain.value = 0;
 
+$('button').on('click', function(e){
+  e.preventDefault();
 
-
+  osc.type = this.id;
+});
 
 $('#keys').on('mousedown', function(e){
   var key = e.target.id;
