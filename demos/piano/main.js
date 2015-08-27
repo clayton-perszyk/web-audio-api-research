@@ -1,3 +1,18 @@
+var chars = {
+  97: "C",
+  115: "C#",
+  100: "D",
+  102: "D#",
+  103: "E",
+  104: "F",
+  106: "F#",
+  107: "G",
+  108: "G#",
+  59: "A",
+  39: "A#",
+  13: "B"
+};
+var key;
 var pitches = {
   "C": 261.626,
   "C#": 277.183,
@@ -35,11 +50,47 @@ gain.connect(analyser);
 analyser.connect(context.destination);
 gain.gain.value = 0;
 
+$('body').on('keypress', function(e){
+  var charCd = e.charCode;
+  var pitch = chars[charCd];
+  var freq = pitches[pitch];
+  if (freq) {
+    key = document.getElementById(pitch);
+    osc.frequency.value = freq;
+    gain.gain.value = 2;
+    key.style.backgroundColor = "#bbb";
+  }
+});
+
+$('body').on('keyup', function(e){
+    gain.gain.value = 0;
+    if ($(key).hasClass("white") && key.style !== "undefined") {
+      key.style.backgroundColor = "#ddd";
+    } else {
+      key.style.backgroundColor = "black";
+    }
+
+});
+
+setInterval(function(){
+  var whites = $('.white');
+  var blacks = $('.black');
+
+  for (var i = 0; i < blacks.length; i++) {
+    blacks[i].style.backgroundColor = "black";
+  }
+
+  for (var j = 0; j < whites.length; j++) {
+    whites[j].style.backgroundColor = "#ddd";
+  }
+}, 1000);
+
 $('button').on('click', function(e){
   e.preventDefault();
 
   osc.type = this.id;
 });
+
 
 $('#keys').on('mousedown', function(e){
   var key = e.target.id;

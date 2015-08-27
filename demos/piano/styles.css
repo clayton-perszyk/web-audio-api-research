@@ -14,8 +14,10 @@ div {
 
 #canvas {
   background: #333;
-  margin: 8px 35px 35px 70px;
+  margin: 2.5px 35px 35px 70px;
   box-shadow: 10px 10px 10px #000000;
+  border-radius: 2%;
+  border: 1px solid #eee;
 }
 
 .white {
